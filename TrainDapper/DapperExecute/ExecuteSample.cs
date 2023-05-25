@@ -12,7 +12,7 @@ namespace TrainDapper.DapperExecute
             {
                 var affectedRows = connection.Execute(SqlCommandCons.CallCreateCourseSP, new
                 {
-                    Title = "Math",
+                    Title = "Math1",
                     TeacherName = "Teacher1",
                     Capacity = 10
                 }, commandType: System.Data.CommandType.StoredProcedure);
@@ -25,12 +25,28 @@ namespace TrainDapper.DapperExecute
         {
             using (var connection = DapperHelper.GetDbConnection())
             {
-                var affectedRows = connection.Execute(SqlCommandCons.CallCreateCourseSP, new
-                {
-                    Title = "Math",
-                    TeacherName = "Teacher1",
-                    Capacity = 10
-                }, commandType: System.Data.CommandType.StoredProcedure);
+                var affectedRows = connection.Execute(SqlCommandCons.CallCreateCourseSP,
+                    new[] //Anonymous Parameter
+                    {
+                        new
+                        {
+                            Title = "Math2",
+                            TeacherName = "Teacher1",
+                            Capacity = 11
+                        },
+                        new
+                        {
+                            Title = "Math3",
+                            TeacherName = "Teacher2",
+                            Capacity = 12
+                        },
+                        new
+                        {
+                            Title = "Math4",
+                            TeacherName = "Teacher3",
+                            Capacity = 13
+                        }
+                    }, commandType: System.Data.CommandType.StoredProcedure);
             }
         }
     }
