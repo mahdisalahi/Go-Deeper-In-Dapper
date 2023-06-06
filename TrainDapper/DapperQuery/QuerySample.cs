@@ -132,5 +132,6 @@ namespace TrainDapper.DapperQuery
                 Console.WriteLine(score.ToString());
             }
         }
+
     }
 }
