@@ -51,5 +51,6 @@ namespace TrainDapper.DapperQuery
                 Console.WriteLine(DapperHelper.GetExecuteCommands());
             }
         }
+
     }
 }
