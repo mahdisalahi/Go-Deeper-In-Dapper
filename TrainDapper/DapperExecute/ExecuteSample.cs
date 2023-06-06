@@ -99,7 +99,7 @@ namespace TrainDapper.DapperExecute
                 var sumRowCount = parameters.Sum(c => c.Get<int>("@RowCount"));
 
                 var res = $"Affected Rows: {sumRowCount}";
-                return res;
+                return res; 
             }
         }
     }
