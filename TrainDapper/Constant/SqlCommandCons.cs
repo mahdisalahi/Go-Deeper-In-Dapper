@@ -3,7 +3,8 @@
     public class SqlCommandCons
     {
         #region Course TB
-
+        public static string InsertCourse = @"INSERT INTO Courses (Title,TeacherFullname,Capacity) 
+                                                Values (@Title,@TeacherFullname,@Capacity);";
         public static string CallCreateCourseSP = "CreateCourse";
 
         #endregion
